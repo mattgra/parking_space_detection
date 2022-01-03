@@ -50,7 +50,7 @@ def send_mail(subject: str, body: str, config: dict, to=None):
         smtp_server.login(gmail_user, gmail_password)
         smtp_server.sendmail(sent_from, to, email_text)
         smtp_server.close()
-        print("Email sent successfully!")
+        print("Email sent successfully to %s!" % to)
     except Exception as ex:
         print("Something went wrong….", ex)
 
@@ -58,4 +58,4 @@ def send_mail(subject: str, body: str, config: dict, to=None):
 if __name__ == '__main__':
     subject = 'Lorem ipsum dolor sit amet'
     body = 'consectetur adipiscing elit'
-    send_mail(subject=subject, body=body)
+    send_mail(subject=subject, body=body, config=parse_config('config/config.yaml'))
