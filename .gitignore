@@ -10,8 +10,9 @@ config/
 # __pycache__
 __pycache__/
 
-# Image data
+# Image data (include Diagram.png as it is used in README)
 *.png
+!data/Diagram.png
 
 # Macbook
 .DS_Store
