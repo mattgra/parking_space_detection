@@ -1,7 +1,21 @@
 # Parking Space detection
-## Setup
+## 0 Purpose
+The purpose of this library is to setup a remotely accessible camera that scans a static location for available parking spots and informs the user about it (i.e., you should be able to trigger a camera via phone/email and receive a message/email about whether a given parking area has a free spot available or not)
+
+## 1 Setup
+### 1a Conda environment
+Install the corresponding conda environment via   
+```TBD```
+
+### 1b Testing
+- Unit tests  
+Run unit tests via  
+```python -m unittest tests/```  
+Note: if you are using PyCharm, I would recommend to setup the testing environment as is shown [here](https://www.jetbrains.com/help/pycharm/testing-your-first-python-application.html#create-test)
+- Integration tests  
 __TBD__
 
+### 1c Formatting
 
 ## Personal Project Description and Planning
 This Repo is built for the purpose of remote parking space monitoring and based on 2 main parts (and 4 resulting features) 
