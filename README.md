@@ -1,6 +1,8 @@
 # Parking Space detection
 ## 0 Purpose
-The purpose of this library is to setup a remotely accessible camera that scans a static location for available parking spots and informs the user about it (i.e., you should be able to trigger a camera via phone/email and receive a message/email about whether a given parking area has a free spot available or not)
+The purpose of this library is to setup a remotely accessible camera that scans a static location for available 
+parking spots and informs the user about it (i.e., you should be able to trigger a camera via phone/email 
+and receive a message/email about whether a given parking area has a free spot available or not)
 ![plot](./data/Diagram.png)
 ## 1 Setup
 ### 1a Conda environment
