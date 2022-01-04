@@ -48,9 +48,9 @@ Initial idea of solution:
 - Once results are available, should be shared via e-mail - (can be just sharing of the raw image in beginning)
 
 ## 3 Implementation status 
-| Feature                     | Level 1 (Status)                                                                 | Level 2 (Status) | Level 3 (Status) |
-|-----------------------------|----------------------------------------------------------------------------------|------------------|------------------|
-| A > Camera setup            | _tbd_                                                                            | -                | -                |
-| B > Server setup            | _tbd_                                                                            | -                | -                |
-| C > Parking space detection | _tbd_                                                                            | -                | -                |
-| D > Information sharing     | Programmatically send plain-text e-mail to specified address :white_check_mark:  | Send attachments | -                |
+| Feature                     | Level 1 (Description)                                        | L1 (Status)        | Level 2 (Description) | L2 (Status) | Level 3 (Description) | L3 (Status) |
+|-----------------------------|--------------------------------------------------------------|--------------------|-----------------------|-------------|-----------------------|-------------|
+| A > Camera setup            | _tbd_                                                        | -                  | -                     | ----        | ----                  | ----        |
+| B > Server setup            | _tbd_                                                        | -                  | -                     | ----        | ----                  | ----        |
+| C > Parking space detection | _tbd_                                                        | -                  | -                     | ----        | ----                  | ----        |
+| D > Information sharing     | Programmatically send plain-text e-mail to specified address | :white_check_mark: | Send attachments      | ----        | ----                  | ----        |
