@@ -9,3 +9,6 @@ config/
 
 # __pycache__
 __pycache__/
+
+# Image data
+*.png

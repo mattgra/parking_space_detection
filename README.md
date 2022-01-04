@@ -16,8 +16,12 @@ Note: if you are using PyCharm, I would recommend to setup the testing environme
 __TBD__
 
 ### 1c Formatting
+Run black code formatting from the project root directory via  
+```black --line-length 120 .```  
+Note: if you are using PyCharm, I would recommend to setup black as is shown [here](https://godatadriven.com/blog/partial-python-code-formatting-with-black-pycharm/) as default code formatter with the additional argument `line-length 120` triggered during every _save_ operation.  
+Black version used in the code is 21.12b0.
 
-## Personal Project Description and Planning
+## 2 Personal Project Description
 This Repo is built for the purpose of remote parking space monitoring and based on 2 main parts (and 4 resulting features) 
 1. Image acquisition part:
 - Feature A > Camera setup: Building a camera setup that allows remote access (e.g., via smartphone)
@@ -42,3 +46,11 @@ Initial idea of solution:
 
 ### Feature D > Information sharing:
 - Once results are available, should be shared via e-mail - (can be just sharing of the raw image in beginning)
+
+## 3 Implementation status 
+| Feature                     | Level 1 (Status)                                                                 | Level 2 (Status) | Level 3 (Status) |
+|-----------------------------|----------------------------------------------------------------------------------|------------------|------------------|
+| A > Camera setup            | _tbd_                                                                            | -                | -                |
+| B > Server setup            | _tbd_                                                                            | -                | -                |
+| C > Parking space detection | _tbd_                                                                            | -                | -                |
+| D > Information sharing     | Programmatically send plain-text e-mail to specified address :white_check_mark:  | Send attachments | -                |

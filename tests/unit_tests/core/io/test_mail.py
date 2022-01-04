@@ -1,4 +1,5 @@
 import unittest
+
 # Unittests to be added
 
 
@@ -10,5 +11,5 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(True, False)  # Should return error
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

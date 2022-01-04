@@ -14,9 +14,9 @@ def parse_config(config_path: str) -> dict:
     with open(config_path) as file:
         config = yaml.load(file, Loader=yaml.FullLoader)
 
-    assert 'gmail_user' in config.keys(), 'No username specified in config!'
-    assert 'gmail_pw' in config.keys(), 'No password specified in config!'
-    assert 'default_receiver' in config.keys(), 'No default receiver specified in config!'
+    assert "gmail_user" in config.keys(), "No username specified in config!"
+    assert "gmail_pw" in config.keys(), "No password specified in config!"
+    assert "default_receiver" in config.keys(), "No default receiver specified in config!"
 
     return config
 
@@ -35,9 +35,9 @@ def send_mail(subject: str, body: str, config: dict):
     """
 
     # Set email config
-    sender_email = config['gmail_user']
-    password = config['gmail_pw']
-    receiver_email = config['default_receiver']
+    sender_email = config["gmail_user"]
+    password = config["gmail_pw"]
+    receiver_email = config["default_receiver"]
 
     # Create message
     message = MIMEMultipart("alternative")
@@ -60,8 +60,8 @@ def send_mail(subject: str, body: str, config: dict):
         server.sendmail(sender_email, receiver_email, message.as_string())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
-    subject = 'This is just a test'
-    body = 'to check if email works'
-    send_mail(subject=subject, body=body, config=parse_config('config/config.yaml'))
+    subject = "This is just a test"
+    body = "to check if email works"
+    send_mail(subject=subject, body=body, config=parse_config("config/config.yaml"))
