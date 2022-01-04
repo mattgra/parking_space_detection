@@ -48,9 +48,9 @@ Initial idea of solution:
 - Once results are available, should be shared via e-mail - (can be just sharing of the raw image in beginning)
 
 ## 3 Implementation status 
-| Feature                     | Level 1 (Description)                                        | L1 (Status)        | Level 2 (Description) | L2 (Status) | Level 3 (Description) | L3 (Status) |
-|-----------------------------|--------------------------------------------------------------|--------------------|-----------------------|-------------|-----------------------|-------------|
-| A > Camera setup            | _tbd_                                                        | -                  | -                     | ----        | ----                  | ----        |
-| B > Server setup            | _tbd_                                                        | -                  | -                     | ----        | ----                  | ----        |
-| C > Parking space detection | _tbd_                                                        | -                  | -                     | ----        | ----                  | ----        |
-| D > Information sharing     | Programmatically send plain-text e-mail to specified address | :white_check_mark: | Send attachments      | ----        | ----                  | ----        |
+| Feature                     | Level 1 (Description)                                                                                      | L1 (Status)        | Level 2 (Description) | L2 (Status) | Level 3 (Description) | L3 (Status) |
+|-----------------------------|------------------------------------------------------------------------------------------------------------|--------------------|-----------------------|-------------|-----------------------|-------------|
+| A > Camera setup            | Standalone camera module connected to Wifi (e.g., RaspberryPi)                                             | -                  | -                     | ----        | ----                  | ----        |
+| B > Server setup            | _tbd: will likely do this last and run computations locally first_                                         | -                  | -                     | ----        | ----                  | ----        |
+| C > Parking space detection | Off-the-shelf network to infer number of cars in image (and if less than given number -> assume free spot) | -                  | -                     | ----        | ----                  | ----        |
+| D > Information sharing     | Programmatically send plain-text e-mail to specified address                                               | :white_check_mark: | Send attachments      | ----        | ----                  | ----        |
