@@ -1,12 +1,14 @@
-import smtplib
 import yaml
+import smtplib, ssl
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 
 def parse_config(config_path: str) -> dict:
     """
     Parses a config file to set required server information (i.e., username, password, and default recipient)
     :param config_path: filepath for yaml config
-    :return:
+    :return: dict containing sender email and pw and receiver email
     """
 
     with open(config_path) as file:
@@ -19,43 +21,47 @@ def parse_config(config_path: str) -> dict:
     return config
 
 
-def send_mail(subject: str, body: str, config: dict, to=None):
+def send_mail(subject: str, body: str, config: dict):
     """
+    Source / Inspiration from: https://realpython.com/python-send-email/;
+
     Sends a mail with specified content from account X to account Y with account X & Y being specified in config.
     TODO: implement sending of attachment - i.e., image
 
     :param subject: string containing email subject line
     :param body: string containing email body
     :param config: dict containing required email information (i.e., sender, password, default receiver)
-    :param to: overwrites default receiver specified in config
     :return: no return value
     """
 
-    gmail_user = config['gmail_user']
-    gmail_password = config['gmail_pw']
-    to = to if to is not None else config['default_receiver']
-    sent_from = gmail_user
+    # Set email config
+    sender_email = config['gmail_user']
+    password = config['gmail_pw']
+    receiver_email = config['default_receiver']
 
-    email_text = """\
-    From: %s
-    To: %s
-    Subject: %s
+    # Create message
+    message = MIMEMultipart("alternative")
+    message["Subject"] = subject
+    message["From"] = sender_email
+    message["To"] = receiver_email
 
-    %s
-    """ % (sent_from, ", ".join(to), subject, body)
+    # Turn these into plain/html MIMEText objects
+    part1 = MIMEText(body, "plain")
+    # part2 = MIMEText(html, "html")  # If HTML is required
 
-    try:
-        smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        smtp_server.ehlo()
-        smtp_server.login(gmail_user, gmail_password)
-        smtp_server.sendmail(sent_from, to, email_text)
-        smtp_server.close()
-        print("Email sent successfully to %s!" % to)
-    except Exception as ex:
-        print("Something went wrong….", ex)
+    # Add HTML/plain-text parts to MIMEMultipart message
+    # The email client will try to render the last part first
+    message.attach(part1)
+
+    # Create secure connection with server and send email
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receiver_email, message.as_string())
 
 
 if __name__ == '__main__':
-    subject = 'Lorem ipsum dolor sit amet'
-    body = 'consectetur adipiscing elit'
+
+    subject = 'This is just a test'
+    body = 'to check if email works'
     send_mail(subject=subject, body=body, config=parse_config('config/config.yaml'))
