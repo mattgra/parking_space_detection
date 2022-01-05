@@ -3,10 +3,10 @@
 # Table of Contents
 0. [Third Example](#third-example)
 1. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
-2. [0 Purpose](#0-purpose)
-3. [1 Setup](#1-setup)
-4. [2 Personal Project Description](#2-personal-project-description)
-5. [3 Imlpementation status](#3-implementation-status)
+2. [Purpose](#0-purpose)
+3. [Setup](#1-setup)
+4. [Personal Project Description](#2-personal-project-description)
+5. [Imlpementation status](#3-implementation-status)
 
 ## Third Example
 ## [Fourth Example](http://www.fourthexample.com) 
