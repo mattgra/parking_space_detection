@@ -6,9 +6,6 @@
 2. [Personal Project Description](#2-personal-project-description)
 3. [Imlpementation status](#3-implementation-status)
 
-## Third Example
-## [Fourth Example](http://www.fourthexample.com) 
-
 ## 0 Purpose
 The purpose of this library is to setup a remotely accessible camera that scans a static location for available 
 parking spots and informs the user about it (i.e., you should be able to trigger a camera via phone/email 
