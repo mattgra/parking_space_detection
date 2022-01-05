@@ -1,4 +1,4 @@
-# Parking Space detection
+# Parking Space Detection
 
 # Table of Contents
 0. [Purpose](#0-purpose)
@@ -14,7 +14,8 @@ and receive a message/email about whether a given parking area has a free spot a
 ## 1 Setup
 ### 1a Conda environment
 Install the corresponding conda environment via   
-```TBD```
+```conda env create -f environment.yml```  
+(and don't forget to activate it via `conda activate cam`)
 
 ### 1b Testing
 - Unit tests  
