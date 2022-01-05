@@ -1,4 +1,17 @@
 # Parking Space detection
+
+# Table of Contents
+1. [Example](#example)
+2. [Example2](#example2)
+3. [Third Example](#third-example)
+4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
+
+
+## Example
+## Example2
+## Third Example
+## [Fourth Example](http://www.fourthexample.com) 
+
 ## 0 Purpose
 The purpose of this library is to setup a remotely accessible camera that scans a static location for available 
 parking spots and informs the user about it (i.e., you should be able to trigger a camera via phone/email 
@@ -12,7 +25,7 @@ Install the corresponding conda environment via
 ### 1b Testing
 - Unit tests  
 Run unit tests via  
-```python -m unittest tests/```  
+```python -m unittest```  
 Note: if you are using PyCharm, I would recommend to setup the testing environment as is shown [here](https://www.jetbrains.com/help/pycharm/testing-your-first-python-application.html#create-test)
 - Integration tests  
 __TBD__
