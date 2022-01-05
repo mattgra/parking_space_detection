@@ -58,10 +58,10 @@ Initial idea of solution:
 - Once results are available, should be shared via e-mail - (can be just sharing of the raw image in beginning)
 
 ## 3 Implementation status 
-|                             | Level 1                                                                                          |                    | Level 2          |            | Level 3         |            |
-|-----------------------------|--------------------------------------------------------------------------------------------------|--------------------|------------------|------------|-----------------|------------|
-| __Feature__                 | __Description__                                                                                  | __Status__         | __Description__  | __Status__ | __Description__ | __Status__ |
-| A > Camera setup            | Standalone camera module connected to Wifi (e.g., RaspberryPi)                                   | -                  | -                | -          | -               | -          |
-| B > Server setup            | _tbd: will likely do this last and run computations locally first_                               | -                  | -                | -          | -               | -          |
-| C > Parking space detection | Yolov4-tiny to infer number of cars in image (and if less than given number -> assume free spot) | :white_check_mark: | -                | -          | -               | -          |
-| D > Information sharing     | Programmatically send plain-text e-mail to specified address                                     | :white_check_mark: | Send attachments | -          | -               | -          |
+|                             | Level 1                                                                                          |                      | Level 2          |              | Level 3         |              |
+|-----------------------------|--------------------------------------------------------------------------------------------------|:--------------------:|------------------|:------------:|-----------------|:------------:|
+| __Feature__                 | __Description__                                                                                  |      __Status__      | __Description__  |  __Status__  | __Description__ |  __Status__  |
+| A > Camera setup            | Standalone camera module connected to Wifi (e.g., RaspberryPi)                                   |          -           | -                |      -       | -               |      -       |
+| B > Server setup            | _tbd: will likely do this last and run computations locally first_                               |          -           | -                |      -       | -               |      -       |
+| C > Parking space detection | Yolov4-tiny to infer number of cars in image (and if less than given number -> assume free spot) |  :white_check_mark:  | -                |      -       | -               |      -       |
+| D > Information sharing     | Programmatically send plain-text e-mail to specified address                                     |  :white_check_mark:  | Send attachments |      -       | -               |      -       |
