@@ -1,0 +1,3 @@
+default_receiver: random_receiver@email.com
+gmail_pw: random_pw
+gmail_user: random_sender@email.com

@@ -1,3 +1,5 @@
+import email.mime.multipart
+
 import yaml
 import smtplib, ssl
 from email.mime.text import MIMEText
@@ -16,12 +18,16 @@ def parse_config(config_path: str) -> dict:
 
     assert "gmail_user" in config.keys(), "No username specified in config!"
     assert "gmail_pw" in config.keys(), "No password specified in config!"
-    assert "default_receiver" in config.keys(), "No default receiver specified in config!"
+    assert (
+        "default_receiver" in config.keys()
+    ), "No default receiver specified in config!"
 
     return config
 
 
-def send_mail(subject: str, body: str, config: dict):
+def send_mail(
+    subject: str, body: str, config: dict, is_test: bool = False
+) -> email.mime.multipart.MIMEMultipart:
     """
     Source / Inspiration from: https://realpython.com/python-send-email/;
 
@@ -31,6 +37,7 @@ def send_mail(subject: str, body: str, config: dict):
     :param subject: string containing email subject line
     :param body: string containing email body
     :param config: dict containing required email information (i.e., sender, password, default receiver)
+    :param is_test: boolean indicating whether function call is for testing purposes or not
     :return: no return value
     """
 
@@ -54,14 +61,21 @@ def send_mail(subject: str, body: str, config: dict):
     message.attach(part1)
 
     # Create secure connection with server and send email
-    context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-        server.login(sender_email, password)
-        server.sendmail(sender_email, receiver_email, message.as_string())
+    if not is_test:
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+            server.login(sender_email, password)
+            server.sendmail(sender_email, receiver_email, message.as_string())
+    return message
 
 
 if __name__ == "__main__":
 
     subject = "This is just a test"
     body = "to check if email works"
-    send_mail(subject=subject, body=body, config=parse_config("config/config.yaml"))
+    x = send_mail(
+        subject=subject,
+        body=body,
+        config=parse_config("config/config.yaml"),
+        is_test=True,
+    )
