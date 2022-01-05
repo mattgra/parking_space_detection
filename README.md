@@ -1,15 +1,13 @@
 # Parking Space detection
 
 # Table of Contents
-0. [Example](#example)
-1. [Example2](#example2)
-2. [Third Example](#third-example)
-3. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
-4. [0 Purpose](#0-purpose)
+0. [Third Example](#third-example)
+1. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
+2. [0 Purpose](#0-purpose)
+3. [1 Setup](#1-setup)
+4. [2 Personal Project Description](#2-personal-project-description)
+5. [3 Imlpementation status](#3-implementation-status)
 
-
-## Example
-## Example2
 ## Third Example
 ## [Fourth Example](http://www.fourthexample.com) 
 
